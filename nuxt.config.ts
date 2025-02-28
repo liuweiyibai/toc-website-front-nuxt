@@ -17,6 +17,9 @@ export default defineNuxtConfig({
     head: {
       title: '创联教育-短视频运营|直播电商|Python数据分析|影视剪辑培训机构',
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      htmlAttrs: {
+        lang: 'zh',
+      },
       script: [
         {
           hid: '53-script', // 添加唯一标识符，避免重复注入

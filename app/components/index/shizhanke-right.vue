@@ -34,7 +34,7 @@
         <div
           v-for="(item, index) in kecheng"
           :key="index"
-          class="text-#353535 mt-14px first:mt-0 text-12px lh-12px"
+          class="text-#353535 mt-14px first:mt-0 text-12px lh-12px flex items-center"
         >
           <img src="../../assets/dot.png" alt="" class="w-10px h-10px mr-10px" />
           <span>{{ item }}</span>
@@ -53,7 +53,7 @@
             <div
               v-for="(item, index) in shizi"
               :key="index"
-              class="text-#353535 mt-14px first:mt-0 text-12px lh-14px"
+              class="text-#353535 mt-14px first:mt-0 text-12px lh-14px flex items-center"
             >
               <img src="../../assets/dot.png" alt="" class="w-10px h-10px mr-10px" />
               <span>{{ item }}</span>
@@ -70,7 +70,7 @@
             <div
               v-for="(item, index) in ziliao"
               :key="index"
-              class="text-#353535 mt-14px first:mt-0 text-12px lh-14px"
+              class="text-#353535 mt-14px first:mt-0 text-12px lh-14px flex items-center"
             >
               <img src="../../assets/dot.png" alt="" class="w-10px h-10px mr-10px" />
               <span>{{ item }}</span>

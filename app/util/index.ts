@@ -16,7 +16,7 @@ import img5a from '../assets/nav/主播02@2x.png'
 export const classesChidren = [
   {
     label: '新媒体短视频+直播电商运营',
-    value: '//med.cledu.cn',
+    value: 'http://med.cledu.cn',
     img: img1,
     imga: img1a,
     width: 22,
@@ -24,7 +24,7 @@ export const classesChidren = [
   },
   {
     label: 'Python数据分析',
-    value: '//dat.cledu.cn',
+    value: 'http://dat.cledu.cn',
     img: img2,
     imga: img2a,
     width: 23,

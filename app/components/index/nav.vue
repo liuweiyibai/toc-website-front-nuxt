@@ -102,7 +102,6 @@
             trigger="hover"
             class="h-full"
             :offset="22"
-            :visible="true"
           >
             <template #reference>
               <a
@@ -165,7 +164,7 @@
   const classes = [
     {
       label: '新媒体短视频+直播电商运营',
-      value: '',
+      value: 'http://med.cledu.cn',
       img: i1,
       title1: '核心技术',
       title1Text: ['制怍短视频爆款', '直播项目实战', '直播电商大运营', '本地生活实战'],
@@ -174,7 +173,7 @@
     },
     {
       label: 'Python数据分析',
-      value: '',
+      value: 'http://dat.cledu.cn',
       img: i2,
       title1: '核心技术',
       title1Text: ['数据分析商业思维', '掌握Python', '大数据与数据仓库', '统计学+数据挖掘'],

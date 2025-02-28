@@ -24,12 +24,12 @@
         </div>
 
         <div class="mt-32px flex h-520px">
-          <div class="left-box" :style="{ backgroundImage: `url(${currentItem.img})` }">
+          <div class="left-box" :style="{ backgroundImage: `url(${currentItem?.img})` }">
             <div class="w-154px mt-30px ml-30px lh-36px text-white font-700 text-20px">{{
-              currentItem.title
+              currentItem?.title
             }}</div>
             <div class="mt-22px ml-30px w-172px text-#ffffff80 lh-18px text-12px family">{{
-              currentItem.enTitle
+              currentItem?.enTitle
             }}</div>
 
             <div
