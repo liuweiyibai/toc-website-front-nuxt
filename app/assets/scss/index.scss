@@ -1,0 +1,16 @@
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+}
+
+.classes-nav {
+  &:hover {
+    span {
+      color: #fff;
+    }
+    background: linear-gradient(-90deg, #3f6cf6, #f06d8a);
+    box-shadow: 0 11px 28px 0 rgba(54, 123, 245, 0.3607843137);
+  }
+}
