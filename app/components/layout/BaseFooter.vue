@@ -39,8 +39,12 @@
                 </div>
               </div>
               <div class="ml-50px">
-                <div class="hover:text-#3F6CF6 cursor-pointer" @click="peixunjidi">培训基地 </div>
-                <div class="hover:text-#3F6CF6 cursor-pointer" @click="zhiyingxiaoqu">直营校区</div>
+                <div class="text-white hover:text-#3F6CF6 cursor-pointer" @click="peixunjidi"
+                  >培训基地
+                </div>
+                <div class="text-white hover:text-#3F6CF6 cursor-pointer" @click="zhiyingxiaoqu"
+                  >直营校区</div
+                >
                 <div class="hover:text-#3F6CF6">
                   <div class="">
                     <nuxt-link
@@ -61,8 +65,12 @@
             <h3 class="m-0 lh-18px text-white font-400 text-18px">服务指南</h3>
             <div class="flex mt-30px text-white cursor-pointer text-12px text-#999 lh-28px">
               <div class="">
-                <div class="hover:text-#3F6CF6 cursor-pointer" @click="onKeFuAction">课程咨询 </div>
-                <div class="hover:text-#3F6CF6 cursor-pointer" @click="onKeFuAction">匿名投诉</div>
+                <div class="text-white hover:text-#3F6CF6 cursor-pointer" @click="onKeFuAction"
+                  >课程咨询
+                </div>
+                <div class="text-white hover:text-#3F6CF6 cursor-pointer" @click="onKeFuAction"
+                  >匿名投诉</div
+                >
 
                 <div class="">
                   <a
