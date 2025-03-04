@@ -26,7 +26,11 @@
               </div>
               <img :style="{ width: item.imgWidth }" v-if="item.img" :src="item.img" />
             </div>
-            <div v-else class="absolute right-166px flex top-2px">
+            <div
+              v-else
+              class="absolute right-166px flex top-2px"
+              :class="index === 0 ? 'w-316px' : ''"
+            >
               <img :style="{ width: item.imgWidth }" v-if="item.img" :src="item.img" />
               <div class="ml-20px">
                 <div
@@ -70,17 +74,16 @@
   import { useHead } from '@unhead/vue'
   definePageMeta({ layout: false })
   useHead({
-    title: '创联教育-短视频运营|直播电商|Python数据分析|影视剪辑培训机构',
+    title: '创联教育简介-港交所上市教育公司_终身职业教育倡导者',
     meta: [
       {
         name: 'description',
         content:
-          '【上市公司-15年潜心积淀】开设新媒体短视频直播电商运营，Python数据分析、本地生活、影视后期剪辑等课程，从入学到入职，核心技能就业培训一体化服务，数百人教研专家团队',
+          '关于创联教育,创联教育成立于2011年,并于2013年在港交所上市。是一家提供“一站式职业培训”综合服务的教培机构,业务覆盖职业教育全产业链,下设分子公司47家,累计培训学员4000万人.',
       },
       {
         name: 'keywords',
-        content:
-          '创联教育,IT培训机构,Python培训,数据分析培训,短视频运营,短视频培训,直播电商培训,影视剪辑培训',
+        content: '创联教育简介,创联,创联教育,终身教育培训平台',
       },
     ],
   })
