@@ -18,12 +18,8 @@
   definePageMeta({
     layout: 'home',
   })
-  // const images = import.meta.glob('../assets/teacher/**/*.{jpg,png,svg,gif}');
-  import { useHead } from '@unhead/vue'
 
-  // for (const path in images) {
-  //   console.log(path)
-  // }
+  import { useHead } from '@unhead/vue'
 
   useHead({
     title: '创联教育-短视频运营|直播电商|Python数据分析|影视剪辑培训机构',
