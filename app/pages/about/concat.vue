@@ -85,6 +85,7 @@
   </div>
 
   <div class="h-50px"></div>
+  <LayoutBaseFooter />
 </template>
 <script lang="ts" setup>
   import a1 from '~/assets/about-01@2x.png'

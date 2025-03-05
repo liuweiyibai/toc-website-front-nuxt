@@ -56,6 +56,7 @@
       </div>
     </div>
     <div class="h-76px"></div>
+    <LayoutBaseFooter />
   </div>
 </template>
 <script lang="ts" setup>

@@ -1,12 +1,6 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  modules: [
-    '@vueuse/nuxt',
-    '@unocss/nuxt',
-    '@pinia/nuxt',
-    '@element-plus/nuxt',
-    // '@nuxtjs/color-mode',
-  ],
+  modules: ['@vueuse/nuxt', '@unocss/nuxt', '@pinia/nuxt', '@element-plus/nuxt'],
 
   devtools: {
     enabled: true,
@@ -46,9 +40,6 @@ export default defineNuxtConfig({
   },
 
   // colorMode
-  colorMode: {
-    classSuffix: '',
-  },
 
   future: {
     compatibilityVersion: 4,

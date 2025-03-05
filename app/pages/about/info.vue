@@ -63,6 +63,8 @@
         </div>
       </div>
     </div>
+
+    <LayoutBaseFooter />
   </div>
 </template>
 <script lang="ts" setup>
