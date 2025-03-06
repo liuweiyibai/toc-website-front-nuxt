@@ -28,7 +28,7 @@
         <div class="text-20px text-#333 mt-16px font-bold text-center lh-20px">{{
           item.label
         }}</div>
-        <div class="btnbtn">了解更多</div>
+        <div class="btnbtn" @click="onKeFuAction">了解更多</div>
       </div>
     </div>
 
@@ -47,6 +47,8 @@
   </div>
 </template>
 <script lang="ts" setup>
+  import { onKeFuAction } from '~/util'
+
   const images1 = import.meta.glob('../../../public/teacher/1/*.{jpg,png,svg,gif}')
   const images2 = import.meta.glob('../../../public/teacher/2/*.{jpg,png,svg,gif}')
   const images3 = import.meta.glob('../../../public/teacher/3/*.{jpg,png,svg,gif}')

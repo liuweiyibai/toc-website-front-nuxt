@@ -32,7 +32,7 @@
           <span>{{ it }}</span>
         </div>
       </div>
-      <div class="button-box"> 了解更多 </div>
+      <div class="button-box" @click="onKeFuAction"> 了解更多 </div>
     </div>
   </div>
 </template>
@@ -40,6 +40,7 @@
   import img1 from '~/assets/teacher-page/biaozhunhuaxiang-icon@2x.png'
   import img2 from '~/assets/teacher-page/jiaoyan-icon@2x.png'
   import img3 from '~/assets/teacher-page/jiaoyantuandui-icon@2x.png'
+  import { onKeFuAction } from '~/util'
   const list = [
     {
       label: '标准化选拔画像',

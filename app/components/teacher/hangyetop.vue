@@ -52,7 +52,7 @@
                   </ul>
 
                   <div class="flex justify-center gap-10px mt-28px">
-                    <div class="blue-btn">
+                    <div class="blue-btn" @click="onKeFuAction">
                       <img
                         src="../../assets/teacher-page/jiaoliu-icon@2x.png"
                         alt=""
@@ -60,7 +60,7 @@
                       />
                       <span>与TA交流</span>
                     </div>
-                    <div class="blue-btn">
+                    <div class="blue-btn" @click="onKeFuAction">
                       <img
                         src="../../assets/teacher-page/shiting-icon@2x.png"
                         class="w-26px h-19px"
@@ -107,7 +107,7 @@
 </template>
 <script lang="ts" setup>
   import type { ElCarousel } from 'element-plus'
-  import { zongJianTeacherList } from '~/util'
+  import { onKeFuAction, zongJianTeacherList } from '~/util'
 
   const btns = ['总监级导师', '企业技术骨干']
   const activeValue = ref(0)

@@ -5,12 +5,12 @@
   </TeacherTitleBox>
   <div class="w-1200px mx-auto mt-45px flex flex-wrap gap-20px">
     <div class="box overflow-hidden" v-for="(item, index) in list" :key="index">
-      <div class="relative text-18px lh-18px text-#333">
+      <div class="relative text-18px lh-18px text-#333 font-bold">
         <img :src="tuoyuan" class="absolute w-26px h-28px top--6px left--5px" alt="" />
         <span class="relative z-1">{{ item.title }}</span>
       </div>
       <div class="mt-18px w-386px text-#333 text-14px lh-20px">{{ item.value }}</div>
-      <div class="s-btn">
+      <div class="s-btn" @click="onKeFuAction">
         <span> {{ item.btn }} </span>
         <img :src="you" alt="" />
       </div>
@@ -54,6 +54,7 @@
   import tuoyuan from '~/assets/teacher-page/椭圆1169@2x.png'
   import you from '~/assets/teacher-page/右@2x.png'
   import * as VCount from 'vue3-count-to'
+  import { onKeFuAction } from '~/util'
   const { CountTo } = VCount
   const list = [
     {
