@@ -14,7 +14,7 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "nuxi dev",
-    "build": "nuxi build",
+    "build": "nuxi build --dotenv .env.production",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "nuxi preview",

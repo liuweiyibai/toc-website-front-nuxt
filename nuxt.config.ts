@@ -66,17 +66,17 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/'],
     },
-    static: true,
-    devProxy: {
-      '/api': {
-        target: 'https://toc-admin-api-test.hrtiger.cn',
-        changeOrigin: true,
-        prependPath: true,
-      },
-    },
+    // static: true,
+    // devProxy: {
+    //   '/api': {
+    //     target: 'https://toc-admin-api-test.hrtiger.cn',
+    //     changeOrigin: true,
+    //     prependPath: true,
+    //   },
+    // },
     routeRules: {
       '/api/**': {
-        proxy: 'https://toc-admin-api-test.hrtiger.cn/**',
+        proxy: process.env.API_PROXY,
       },
     },
   },
