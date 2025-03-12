@@ -56,10 +56,12 @@
   //   pageInfo.value = json?.data
   //   document.title = json?.data?.title
   // })
-  const path = route.path
-  const paths = path.split('/')
-  const newsId = paths[paths.length - 1]
-  const { data } = useFetch(`/api/manger-web/v1/web/news/${newsId}`)
+
+  // @ts-ignore
+  const slug = route.params?.slug || []
+
+  const newsId = slug[slug.length - 1]
+  const { data } = await useFetch(`/api/manger-web/v1/web/news/${newsId}`)
   const pageInfo = computed(() => {
     // @ts-ignore
     return data.value?.data

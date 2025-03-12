@@ -55,7 +55,7 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2024-08-14',
-
+  ssr: true,
   nitro: {
     esbuild: {
       options: {
@@ -66,7 +66,7 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/'],
     },
-    // static: true,
+    static: true,
     devProxy: {
       '/api': {
         target: 'https://toc-admin-api-test.hrtiger.cn',

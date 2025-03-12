@@ -23,7 +23,7 @@
     "prepare": "nuxi prepare",
     "typecheck": "vue-tsc --noEmit",
     "gh": "gh-pages -d ./.output/public -b gh-pages",
-    "pregh": "pnpm generate && cp ./web.conf ./.output/public/"
+    "pregh": "pnpm build && cp ./web.conf ./.output/public/"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
