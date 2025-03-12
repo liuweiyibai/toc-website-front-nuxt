@@ -46,8 +46,8 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/your-repo-name:latest
-            ${{ secrets.DOCKER_USERNAME }}/your-repo-name:${{ env.VERSION }}
+            ${{ secrets.DOCKER_USERNAME }}/toc-website-front-nuxt
+            ${{ secrets.DOCKER_USERNAME }}/toc-website-front-nuxt:${{ env.VERSION }}
 
       # 可选：清理构建缓存（减少占用空间）
       - name: Clean up Docker Cache
