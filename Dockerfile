@@ -4,13 +4,13 @@ FROM node:20-alpine as build-stage
 # 设置工作目录
 WORKDIR /app
 
-# 启用 corepack 并更新 pnpm 版本
-RUN corepack enable && corepack prepare pnpm@latest --activate
+# 安装 pnpm 直接跳过 corepack
+RUN npm install -g pnpm@latest
 
 # 复制必要的依赖文件
 COPY .npmrc package.json pnpm-lock.yaml ./
 
-# 使用缓存机制加速构建，修复签名问题
+# 使用缓存机制安装依赖
 RUN --mount=type=cache,id=pnpm-store,target=/root/.pnpm-store \
     pnpm install --frozen-lockfile
 
