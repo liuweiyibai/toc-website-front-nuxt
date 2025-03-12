@@ -1,4 +1,5 @@
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
+
 export default defineNuxtConfig({
   modules: ['@vueuse/nuxt', '@unocss/nuxt', '@pinia/nuxt', '@element-plus/nuxt'],
 
@@ -65,12 +66,17 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/'],
     },
-    static: true,
+    // static: true,
     devProxy: {
       '/api': {
         target: 'https://toc-admin-api-test.hrtiger.cn',
         changeOrigin: true,
         prependPath: true,
+      },
+    },
+    routeRules: {
+      '/api/**': {
+        proxy: 'https://toc-admin-api-test.hrtiger.cn/**',
       },
     },
   },

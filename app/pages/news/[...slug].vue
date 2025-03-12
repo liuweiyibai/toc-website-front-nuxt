@@ -1,7 +1,5 @@
 <template>
   <div class="w-full">
-    <LayoutsBaseHeader />
-
     <div class="w-1200px mx-auto mt-50px">
       <el-breadcrumb separator=">">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
@@ -36,12 +34,12 @@
 <script lang="ts" setup>
   import dayjs from 'dayjs'
   import { computed } from 'vue'
-  import { onMounted, ref } from 'vue'
+  // import { onMounted, ref } from 'vue'
   import { useRoute } from 'vue-router'
 
   const route = useRoute()
-  const pageInfo = ref()
-  const html = computed(() => escape2Html(pageInfo.value?.content || ''))
+  // const pageInfo = ref()
+  // const html = computed(() => escape2Html(pageInfo.value?.content || ''))
   // 富文本反转义html (从接口取值后调用方法转为 Html)，v-html="escape2Html(text)"
   const escape2Html = (str: string) => {
     const arrEntities: any = { lt: '<', gt: '>', nbsp: ' ', amp: '&', quot: '"' }
@@ -49,13 +47,28 @@
       return arrEntities[t]
     })
   }
-  onMounted(async () => {
-    const path = route.path
-    const paths = path.split('/')
-    const newsId = paths[paths.length - 1]
-    const response = await fetch(`/api/manger-web/v1/web/news/${newsId}`)
-    const json = await response.json()
-    pageInfo.value = json?.data
+  // onMounted(async () => {
+  //   const path = route.path
+  //   const paths = path.split('/')
+  //   const newsId = paths[paths.length - 1]
+  //   const response = await fetch(`/api/manger-web/v1/web/news/${newsId}`)
+  //   const json = await response.json()
+  //   pageInfo.value = json?.data
+  //   document.title = json?.data?.title
+  // })
+  const path = route.path
+  const paths = path.split('/')
+  const newsId = paths[paths.length - 1]
+  const { data } = useFetch(`/api/manger-web/v1/web/news/${newsId}`)
+  const pageInfo = computed(() => {
+    // @ts-ignore
+    return data.value?.data
+  })
+
+  const html = computed(() => escape2Html(pageInfo.value?.content || ''))
+
+  useHead({
+    title: pageInfo.value?.title,
   })
 </script>
 
